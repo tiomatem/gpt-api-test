@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-  res.status(200).json([
+  const events = [
     {
       title: "Latte Art Schulung",
       date: "2025-04-13",
@@ -10,5 +10,6 @@ export default function handler(req, res) {
       date: "2025-04-20",
       location: "Simov Werkstatt"
     }
-  ]);
+  ];
+  res.status(200).json({ events }); // 👈 wichtige Änderung
 }
